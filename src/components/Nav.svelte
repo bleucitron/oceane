@@ -35,8 +35,6 @@
     flex-flow: column
     padding: 1rem
     padding-bottom: 0
-    max-height: 5rem
-    box-shadow: 4px 0 4px 0 rgba(black, 0.5)
 
     a
       color: inherit
@@ -52,27 +50,24 @@
 
   a
     text-decoration: none
+    transition: opacity 300ms ease-in-out, color 300ms ease-in-out
 
     &:hover, &:focus
       outline: none
-      opacity: 1
+      color: var(--red)
 
   li
     margin: 0 0.5rem
 
     &.current a
-      opacity: 1
-
       &::after
-        opacity: 1
+        color: var(--grey)
 
     a
       position: relative
-      color: var(--darkest-grey)
+      color: var(--grey)
       font-size: 1.1rem
       font-family: 'Bebas Neue', cursive
-      opacity: 0.5
-      transition: opacity 300ms ease-in-out
 
       &::after
         content: ''
@@ -81,13 +76,13 @@
         bottom: 0
         left: 0
         height: 3px
-        background: var(--darkest-grey)
-        opacity: 0
+        background: transparent
         transition: opacity 300ms ease-in-out
 
   .img-container
     display: flex
     width: 3rem
+    max-height: 2rem
     margin-right: 0.5rem
     object-fit: contain
     border: 1px solid transparent
@@ -99,6 +94,7 @@
   @include tablet
     nav
       padding: 1rem
+      padding-bottom: 0.5rem
 
       a
         font-size: 1.5rem
@@ -107,16 +103,24 @@
       font-size: 1.5rem
 
     .img-container
-      height: 4rem
-      width: 4rem
+      width: 6rem
+      max-height: unset
       padding: 0.5rem
       border-radius: 50%
-      border-color: var(--darkest-grey)
 
   @include desktop
     nav
+      width: 70%
+      margin: auto
+      padding: 1rem
       flex-flow: row
       justify-content: space-between
+
+      li
+        margin: 0 1rem
+
+    .img-container
+      width: 5rem
 
 
 </style>

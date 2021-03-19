@@ -24,17 +24,19 @@
   main
     padding: 2rem
 
+  header
+    box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+
   footer
     display: flex
     height: 2.5rem
-    // background: linear-gradient(green, blue)
     background: linear-gradient(var(--light-blue), var(--blue))
 
     font-size: 0.7rem
     color: var(--lightest-grey)
 
-    a
-      color: var(--lightest-grey)
+    // a
+    //   color: var(--lightest-grey)
 
     aside
       text-align: center
@@ -44,4 +46,9 @@
     footer
       height: 5rem
       font-size: 0.9rem
+
+  @include desktop
+    main
+      width: 70%
+      margin: auto
 </style>
