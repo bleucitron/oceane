@@ -24,7 +24,7 @@
     <p>
       En cette période plus que jamais, vous ressentez le besoin de prendre soin
       de vous, de reprendre le contrôle sur votre vie ? Des événements
-      extérieurs sont venus chambouler votre équilibres et vous souhaitez
+      extérieurs sont venus chambouler votre équilibre et vous souhaitez
       remettre de l'ordre dans tout cela ?
     </p>
     <p>
@@ -32,8 +32,8 @@
       l'esprit et vous hésitez.
     </p>
     <p>
-      Je suis par là pour vous écouter et vous accompagner pas à pas vers
-      l'atteinte de vos objectifs.
+      Je suis là pour vous écouter et vous accompagner pas à pas vers l'atteinte
+      de vos objectifs.
     </p>
     <p>Ensemble, mettons le cap sur ce qui compte vraiment pour vous !</p>
   </div>
@@ -45,7 +45,7 @@
     <img src="/images/belly-3186730_1920.jpg" alt="A flower on a belly" />
   </div>
   <div class="content">
-    <p>Il n'y a pas une sexualité, mais deS sexualitéS.</p>
+    <p>Il n'y a pas une sexualité, mais de<b>s</b> sexualité<b>s</b>.</p>
     <p>Quelle est la votre ?</p>
     <p>
       Confronté à la sur-représentation d'une sexualité normée, il est parfois
