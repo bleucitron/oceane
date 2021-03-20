@@ -11,6 +11,12 @@ h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+  max-width: 70ch;
+  margin: 0.5rem 0;
+  text-align: justify;
+}
+
 #svelte, #sapper {
   display: flex;
   flex-flow: column;
@@ -19,11 +25,12 @@ h1, h2, h3 {
   width: 100vw;
   line-height: 1.2;
   color: var(--darkest-grey);
-
   --shiny-blue: #37afc8;
   --light-blue: #96c3c8;
   --blue: #69a5b4;
-  --red: #c88c82;
+  --dark-blue: #5e929e;
+  --pink: #c88c82;
+  --dark-red: #b37b72;
   --darkest-grey: #252525;
   --grey: #666;
   --lightest-grey: #f0f0f0;

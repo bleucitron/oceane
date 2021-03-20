@@ -54,7 +54,7 @@
 
     &:hover, &:focus
       outline: none
-      color: var(--red)
+      color: var(--pink)
 
   li
     margin: 0 0.5rem
