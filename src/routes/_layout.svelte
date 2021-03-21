@@ -4,6 +4,34 @@
 
   const { page } = stores();
   const year = new Date().getFullYear();
+
+  const quotes = [
+    {
+      text:
+        '<p>Impose ta chance, serre ton bonheur, et va vers ton risque.</p><p>À te regarder ils s’habitueront</p>',
+    },
+    {
+      text: "<p>On t'accompagnera si tu trouves ta route</p>",
+      author: 'Eugène Guillevic',
+    },
+    {
+      text:
+        '<p>Même un voyage de mille kilomètres commence par un premier pas</p>',
+      author: 'Proverbe japonais',
+    },
+    {
+      text:
+        '<p>Pour prendre son envol, il faut découvrir ce qui nous donne des ailes</p>',
+      author: 'Proverbe japonais',
+    },
+  ];
+
+  function getRandomQuote() {
+    const n = Math.floor(Math.random() * quotes.length);
+    return quotes[n];
+  }
+
+  const quote = getRandomQuote();
 </script>
 
 <header>
@@ -16,9 +44,17 @@
 <footer>
   <div class="img-container">
     <img
-      src="/images/BAN1.jpg"
+      src="/images/dawn-3358468_1920.jpg"
       alt="Des oiseaux qui s'envolent d'un arbre avec la citation 'Pour prendre son envol, il faut découvrir ce qui nous donne des ailes'"
     />
+    <blockquote>
+      <div>
+        {@html quote.text}
+        {#if quote.author}
+          <p class="author">{quote.author}</p>
+        {/if}
+      </div>
+    </blockquote>
   </div>
   <aside>
     <div>Océane Coaching</div>
@@ -47,10 +83,40 @@
 
   footer
     margin-top: 2rem
-    background: linear-gradient(var(--light-blue), var(--blue))
 
     font-size: 0.7rem
     color: var(--lightest-grey)
+
+    .img-container
+      position: relative
+      height: 5rem
+
+    blockquote
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      display: flex
+      padding: 1em 1.5em
+
+      div
+        margin: auto
+        position: relative
+
+      :global(p)
+        text-align: center
+        font-size: 1.5em
+        font-family: cursive
+        text-shadow: 3px ​3px #000
+        margin: 0
+
+      .author
+        position: absolute
+        bottom: -1.7em
+        right: -1em
+        font-size: 1.2em
+
 
     // a
     //   color: var(--lightest-grey)
@@ -62,11 +128,19 @@
       justify-content: center
       height: 2.5rem
       text-align: center
+      background: linear-gradient(var(--light-blue), var(--blue))
 
   :global(.img-container)
+    display: flex
+    overflow: hidden
+    margin: auto
     width: 100%
-  :global(img)
-    width: 100%
+    max-height: 20rem
+
+    :global(img)
+      object-fit: cover
+      width: 100%
+      width: 100%
 
   @include tablet
     header
@@ -80,9 +154,20 @@
       margin-top: 8rem
 
     footer
+      .img-container
+        height: 10rem
       aside
         height: 5rem
         font-size: 0.9rem
+      blockquote
+        :global(p)
+          max-width: 70vw
+          font-size: 2.5em
+          margin: 0.5em
+        .author
+          font-size: 1.5em
+          bottom: -1.2em
+          right: -1.2em
 
   @include desktop
     header
@@ -97,6 +182,19 @@
 
       &.home
         padding: 0
+
+    footer
+      .img-container
+        height: 15rem
+
+      blockquote
+        :global(p)
+          max-width: 70vw
+          font-size: 3em
+        .author
+          font-size: 1.8em
+          bottom: -1.5em
+          right: -1.5em
 
     :global(p)
       font-size: 1.1rem

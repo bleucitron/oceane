@@ -113,17 +113,6 @@
     color: white
     box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
 
-  :global(.img-container)
-    display: flex
-    object-fit: contain
-    overflow: hidden
-    margin: auto
-    max-height: 20rem
-
-    :global(img)
-      object-fit: cover
-      width: 100%
-
   @include tablet
     .logo
       margin: 5rem auto
