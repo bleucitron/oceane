@@ -35,6 +35,7 @@
     flex-flow: column
     padding: 1rem
     padding-bottom: 0
+    max-width: 65rem
 
     a
       color: inherit

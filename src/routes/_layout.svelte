@@ -42,20 +42,20 @@
 </main>
 
 <footer>
-  <div class="img-container">
-    <img
-      src="/images/dawn-3358468_1920.jpg"
-      alt="Des oiseaux qui s'envolent d'un arbre avec la citation 'Pour prendre son envol, il faut découvrir ce qui nous donne des ailes'"
-    />
+  <figure>
     <blockquote>
-      <div>
-        {@html quote.text}
-        {#if quote.author}
-          <p class="author">{quote.author}</p>
-        {/if}
-      </div>
+      {@html quote.text}
+      {#if quote.author}
+        <p class="author">{quote.author}</p>
+      {/if}
     </blockquote>
-  </div>
+    <div class="img-container">
+      <img
+        src="/images/dawn-3358468_1920.jpg"
+        alt="Des oiseaux qui s'envolent d'un arbre avec la citation 'Pour prendre son envol, il faut découvrir ce qui nous donne des ailes'"
+      />
+    </div>
+  </figure>
   <aside>
     <div>Océane Coaching</div>
     <!-- <div>
@@ -88,34 +88,36 @@
     color: var(--lightest-grey)
 
     .img-container
-      position: relative
-      height: 5rem
-
-    blockquote
       position: absolute
       top: 0
       bottom: 0
       left: 0
       right: 0
+
+    figure
+      position: relative
+      height: 7rem
       display: flex
       padding: 1em 1.5em
 
-      div
-        margin: auto
-        position: relative
+    blockquote
+      width: 80%
+      margin: auto
+      position: relative
+      z-index: 1
+      font-family: Caveat
 
-      :global(p)
-        text-align: center
-        font-size: 1.5em
-        font-family: cursive
-        text-shadow: 3px ​3px #000
-        margin: 0
+    :global(p)
+      text-align: center
+      font-size: 1.6em
+      text-shadow: 3px ​3px #000
+      margin: 0
 
-      .author
-        position: absolute
-        bottom: -1.7em
-        right: -1em
-        font-size: 1.2em
+    .author
+      position: absolute
+      bottom: -1.5em
+      right: -1em
+      font-size: 1.2em
 
 
     // a
@@ -135,7 +137,7 @@
     overflow: hidden
     margin: auto
     width: 100%
-    max-height: 20rem
+    max-height: 15rem
 
     :global(img)
       object-fit: cover
@@ -154,24 +156,34 @@
       margin-top: 8rem
 
     footer
-      .img-container
-        height: 10rem
       aside
         height: 5rem
         font-size: 0.9rem
+
+      figure
+        height: 10rem
+
       blockquote
-        :global(p)
-          max-width: 70vw
-          font-size: 2.5em
-          margin: 0.5em
-        .author
-          font-size: 1.5em
-          bottom: -1.2em
-          right: -1.2em
+        width: 70%
+
+      :global(p)
+        max-width: 70vw
+        font-size: 3em
+
+      .author
+        font-size: 1.8em
+        bottom: -1.2em
+        right: -1.2em
+
+    :global(.img-container)
+      max-height: unset
 
   @include desktop
     header
       height: 5rem
+
+    :global(p)
+      font-size: 1.1rem
 
     main
       width: 70%
@@ -184,18 +196,19 @@
         padding: 0
 
     footer
-      .img-container
+      figure
         height: 15rem
 
       blockquote
-        :global(p)
-          max-width: 70vw
-          font-size: 3em
-        .author
-          font-size: 1.8em
-          bottom: -1.5em
-          right: -1.5em
+        width: 60%
 
-    :global(p)
-      font-size: 1.1rem
+      :global(p)
+        max-width: 70vw
+        font-size: 3.5em
+
+      .author
+        font-size: 2em
+        bottom: -1.5em
+        right: -1.5em
+
 </style>

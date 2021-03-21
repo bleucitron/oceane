@@ -78,7 +78,7 @@
     &:last-child
       margin-bottom: 3rem
 
-  .logo.img-container
+  .logo
       margin: 2rem auto
       width: 75%
 
@@ -115,10 +115,9 @@
 
   @include tablet
     .logo
-      margin: 5rem auto
-
-      &.img-container
-        width: 50%
+      margin: 3rem auto
+      margin-bottom: 5rem
+      width: 50%
 
     h2
       position: unset
@@ -153,6 +152,4 @@
       margin-left: 1rem
 
     @include desktop
-      .logo.img-container
-        width: 60%
 </style>
