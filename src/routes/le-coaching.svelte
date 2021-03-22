@@ -29,15 +29,16 @@
       question que vous pourrez progresser. Le coaching est un accompagnement
       pas à pas dans votre voyage.
     </p>
-    <blockquote>
-      <p>
-        "Accompagner quelqu’un, c’est se placer ni devant, ni derrière, ni à la
-        place.
-      </p>
-      <p>C’est être à côté."</p>
-    </blockquote>
   </div>
 </section>
+
+<blockquote>
+  <p>
+    Accompagner quelqu’un, c’est se placer ni devant, ni derrière, ni à la
+    place.
+  </p>
+  <p>C’est être à côté.</p>
+</blockquote>
 
 <section>
   <h2>Déontologie</h2>
@@ -54,11 +55,26 @@
 
 <style lang="sass">
   blockquote
+    position: relative
+    color: black
     font-size: 1.2em
     font-style: italic
     margin: 2em 0
     padding-left: 0.5em
-    border-left: 3px solid var(--pink)
+    quotes: initial
+
+    &::after
+      position: absolute
+      color: var(--pink)
+      opacity: 0.2
+      font-size: 12em
+      z-index: -1
+      top: 0
+      left: -0.1em
+      content: open-quote
+
+    p
+      text-align: center
 
   ul
     padding-left: 1.5em
@@ -69,4 +85,15 @@
 
   section:last-of-type
     align-items: center
+
+  @include tablet
+    blockquote
+      &::after
+        top: -0.25em
+        left: -0.1em
+
+  @include desktop
+    blockquote
+      p
+        font-size: 1.2em
 </style>
