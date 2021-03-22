@@ -8,6 +8,11 @@
   const quotes = [
     {
       text:
+        '<p>Accompagner quelqu’un, c’est se placer ni devant, ni derrière, ni à la place.</p><p>C’est être à côté.</p>',
+      author: 'Joseph Templier',
+    },
+    {
+      text:
         '<p>Impose ta chance, serre ton bonheur, et va vers ton risque.</p><p>À te regarder ils s’habitueront</p>',
     },
     {
@@ -66,13 +71,6 @@
 </footer>
 
 <style lang="sass">
-  main
-    margin-top: 5rem
-    padding: 0rem 1rem
-
-    &.home
-      padding: 0
-
   header
     position: fixed
     z-index: 3
@@ -80,6 +78,53 @@
     height: 5rem
     background: white
     box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+
+  main
+    margin-top: 5rem
+    // padding: 0rem 1rem
+    padding: 0
+
+    :global(h1)
+      margin: 1.5em 0
+      font-size: 1.5em
+      text-align: center
+
+
+    :global(p)
+      margin: 1.5rem 0
+    :global(p:last-child)
+      margin-bottom: 3rem
+
+    :global(section)
+      position: relative
+      margin: 2em 0
+
+    :global(section .img-container)
+      width: 100%
+
+    :global(section img)
+      filter: opacity(70%)
+
+    :global(.content)
+      padding: 0 1rem
+
+    :global(h2)
+      position: sticky
+      top: 5rem
+      margin: 1.5rem 0
+      margin-bottom: 0
+      background: white
+      z-index: 1
+      font-size: 1.2em
+      font-weight: bold
+      padding: 0.5em
+      padding-left: 1em
+      background: var(--blue)
+      color: white
+      box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+
+
+
 
   footer
     margin-top: 2rem
@@ -150,10 +195,40 @@
 
     main
       padding: 2rem 2rem
+      margin-top: 8rem
+
       &.home
         padding: 2rem 4rem
 
-      margin-top: 8rem
+      :global(h1)
+        font-size: 2em
+        margin-top: 1em
+        margin-bottom: 2em
+
+      :global(h2)
+        position: unset
+        padding-left: 0.5em
+        margin-bottom: 0.5em
+        width: 70%
+        text-align: center
+
+      :global(section)
+        margin-top: 2rem
+        display: flex
+        flex-flow: column
+
+      :global(section .img-container)
+        position: absolute
+        top: 0
+        width: 35%
+        right: 0
+        border-radius: 8px
+        overflow: hidden
+
+      :global(.content)
+        padding: 0
+        width: 60%
+        margin-left: 1rem
 
     footer
       aside
@@ -191,6 +266,10 @@
       margin: auto
       margin-top: 5rem
       padding: 0
+
+      :global(h1)
+        margin: 2em 0
+        font-size: 2.5em
 
       &.home
         padding: 0

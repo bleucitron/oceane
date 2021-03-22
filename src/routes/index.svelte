@@ -73,45 +73,36 @@
   h1
     display: none
 
-  p
-    margin: 1.5rem 0
-    &:last-child
-      margin-bottom: 3rem
+  // p
+  //   margin: 1.5rem 0
+  //   &:last-child
+  //     margin-bottom: 3rem
 
   .logo
       margin: 2rem auto
       width: 75%
 
-  section
-    position: relative
+  section:nth-of-type(2)
+    h2
+      background: var(--pink)
 
-    .img-container
-      width: 100%
+  // .content
+  //   padding: 0 1rem
 
-    img
-      filter: opacity(70%)
-
-    &:nth-of-type(2)
-      h2
-        background: var(--pink)
-
-  .content
-    padding: 0 1rem
-
-  h2
-    position: sticky
-    top: 5rem
-    margin: 1.5rem 0
-    margin-bottom: 0
-    background: white
-    z-index: 1
-    font-size: 1.2em
-    font-weight: bold
-    padding: 0.5em
-    padding-left: 1em
-    background: var(--blue)
-    color: white
-    box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+  // h2
+  //   position: sticky
+  //   top: 5rem
+  //   margin: 1.5rem 0
+  //   margin-bottom: 0
+  //   background: white
+  //   z-index: 1
+  //   font-size: 1.2em
+  //   font-weight: bold
+  //   padding: 0.5em
+  //   padding-left: 1em
+  //   background: var(--blue)
+  //   color: white
+  //   box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
 
   @include tablet
     .logo
@@ -119,37 +110,37 @@
       margin-bottom: 5rem
       width: 50%
 
-    h2
-      position: unset
-      padding-left: 0.5em
-      margin-bottom: 0.5em
-      width: 70%
-      text-align: center
+    // h2
+    //   position: unset
+    //   padding-left: 0.5em
+    //   margin-bottom: 0.5em
+    //   width: 70%
+    //   text-align: center
 
-    section
-      margin-top: 2rem
-      display: flex
-      flex-flow: column
+    // section
+    //   margin-top: 2rem
+    //   display: flex
+    //   flex-flow: column
+
+    //   .img-container
+    //     position: absolute
+    //     top: 0
+    //     width: 35%
+    //     right: 0
+    //     border-radius: 8px
+    //     overflow: hidden
+
+    section:nth-of-type(2)
+      align-items: flex-end
 
       .img-container
-        position: absolute
-        top: 0
-        width: 35%
-        right: 0
-        border-radius: 8px
-        overflow: hidden
+        left: 0
+        right: unset
 
-      &:nth-of-type(2)
-        align-items: flex-end
-
-        .img-container
-          left: 0
-          right: unset
-
-    .content
-      padding: 0
-      width: 60%
-      margin-left: 1rem
+    // .content
+    //   padding: 0
+    //   width: 60%
+    //   margin-left: 1rem
 
     @include desktop
 </style>

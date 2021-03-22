@@ -61,8 +61,10 @@
     margin: 0 0.5rem
 
     &.current a
-      &::after
-        color: var(--grey)
+      color: var(--pink)
+
+      // &::after
+      //   background: var(--grey)
 
     a
       position: relative
