@@ -132,6 +132,7 @@
 
     :global(p)
       margin: 1.5rem 0
+      line-height: 1.4em
     :global(p:last-child)
       margin-bottom: 3rem
 
@@ -146,7 +147,7 @@
       filter: opacity(70%)
 
     :global(.content)
-      padding: 0 1rem
+      padding: 0 1.5rem
 
     :global(h2)
       position: sticky

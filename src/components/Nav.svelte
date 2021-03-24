@@ -5,8 +5,8 @@
   // $: console.log('Page', $page.path);
 
   const links = [
-    { href: '/qui-suis-je', label: 'Qui suis-je?' },
     { href: '/le-coaching', label: 'Le coaching' },
+    { href: '/qui-suis-je', label: 'Qui suis-je?' },
     { href: '/contact', label: 'Contact' },
   ];
 </script>
