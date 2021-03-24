@@ -124,6 +124,11 @@
       font-size: 1.5em
       text-align: center
 
+    :global(p a)
+      color: var(--pink)
+      text-decoration: none
+    :global(p a:visited)
+      color: var(--blue)
 
     :global(p)
       margin: 1.5rem 0
@@ -278,7 +283,7 @@
       blockquote
         width: 70%
 
-      :global(p)
+      :global(p), :global(li)
         max-width: 70vw
         font-size: 3em
 
@@ -294,7 +299,7 @@
     header
       height: 5rem
 
-    :global(p)
+    :global(p), :global(li)
       font-size: 1.1rem
 
     main

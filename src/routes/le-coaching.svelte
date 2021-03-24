@@ -41,15 +41,21 @@
 </blockquote>
 
 <section>
-  <h2>Déontologie</h2>
+  <h2>Code de Déontologie</h2>
   <div class="content">
-    <p>Selon le code de déontologie de la profession :</p>
+    <p>Je m'engage à:</p>
     <ul>
-      <li>Nos conversations sont <b>confidentielles</b></li>
-      <li>Notre relation est strictement <b>professionnelle</b></li>
-      <li>Je continue à me former et à m'informer</li>
-      <li>Je fais état de ma pratique auprès de profession</li>
+      <li>un strict respect de la <b>confidentialité</b> de nos entretiens</li>
+      <li>me former et m'informer continuellement</li>
+      <li>faire état de ma pratique auprès d'un superviseur</li>
+      <li>veiller en priorité à vos intérêts</li>
+      <li>maintenir une relation strictement <b>professionnelle</b></li>
     </ul>
+    <p>
+      Je vous invite à consulter <a href="/Code de déontologie.pdf"
+        >l'intégralité de mon code de déontologie</a
+      >.
+    </p>
   </div>
 </section>
 
