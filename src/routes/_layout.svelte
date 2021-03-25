@@ -124,11 +124,12 @@
       font-size: 1.5em
       text-align: center
 
-    :global(p a)
+    :global(a)
       color: var(--pink)
       text-decoration: none
-    :global(p a:visited)
-      color: var(--blue)
+    :global(a:hover), :global(a:focus)
+      outline: none
+      text-decoration: underline
 
     :global(p)
       margin: 1.5rem 0
