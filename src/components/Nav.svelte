@@ -1,15 +1,13 @@
 <script>
   import { stores } from '@sapper/app';
+  import { titleByPath } from '../helpers';
+
   const { page } = stores();
 
-  // $: console.log('Page', $page.path);
-
-  const links = [
-    { href: '/le-coaching', label: 'Le coaching' },
-    { href: '/tarifs', label: 'Tarifs' },
-    { href: '/qui-suis-je', label: 'Qui suis-je?' },
-    { href: '/contact', label: 'Contact' },
-  ];
+  const links = Object.entries(titleByPath).map(([href, label]) => ({
+    href,
+    label,
+  }));
 </script>
 
 <nav>
