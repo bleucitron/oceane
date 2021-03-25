@@ -6,6 +6,7 @@
 
   const links = [
     { href: '/le-coaching', label: 'Le coaching' },
+    { href: '/tarifs', label: 'Tarifs' },
     { href: '/qui-suis-je', label: 'Qui suis-je?' },
     { href: '/contact', label: 'Contact' },
   ];

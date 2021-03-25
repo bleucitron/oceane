@@ -164,8 +164,12 @@
       color: white
       box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
 
+    :global(ul)
+      padding-left: 1.5em
+      list-style: disc
 
-
+    :global(li)
+      margin: 0.5em 0
 
   footer
     margin-top: 2rem
