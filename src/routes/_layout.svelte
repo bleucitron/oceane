@@ -149,7 +149,7 @@
     :global(p)
       text-align: center
       font-size: 1.6em
-      text-shadow: 3px ​3px #000
+      text-shadow: black 0 0 10px
       margin: 0
 
     .author

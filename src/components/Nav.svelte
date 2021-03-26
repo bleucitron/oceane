@@ -11,7 +11,7 @@
 </script>
 
 <nav>
-  <a href="/">
+  <a class="home" href="/">
     <div class="img-container">
       <img src="/images/logo-small.png" alt="Logo" />
     </div>
@@ -43,7 +43,8 @@
 
       font-size: 1.2rem
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-      text-transform: uppercase
+      &.home
+        text-transform: uppercase
 
   ul
     margin: 0.5rem 0
@@ -62,14 +63,11 @@
     &.current a
       color: var(--pink)
 
-      // &::after
-      //   background: var(--grey)
-
     a
       position: relative
       color: var(--grey)
       font-size: 1.1rem
-      font-family: 'Bebas Neue', cursive
+      font-family: 'Bebas Neue', sans-serif
 
       &::after
         content: ''
@@ -112,7 +110,7 @@
 
   @include desktop
     nav
-      width: 70%
+      width: 75%
       margin: auto
       padding: 1rem
       flex-flow: row
@@ -123,6 +121,5 @@
 
     .img-container
       width: 5rem
-
 
 </style>
