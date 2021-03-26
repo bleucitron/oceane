@@ -9,7 +9,9 @@
   let baseTitle = 'Océane coaching';
   $: isHome = $page.path === '/';
 
-  $: title = isHome ? baseTitle : `${titleByPath[$page.path]} - ${baseTitle}`;
+  $: title = isHome
+    ? `${baseTitle} - Coach en bien-être et sexualité}`
+    : `${baseTitle} - ${titleByPath[$page.path]}`;
 </script>
 
 <svelte:head>
