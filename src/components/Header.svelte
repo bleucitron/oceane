@@ -10,21 +10,31 @@
   }));
 </script>
 
-<nav>
-  <a class="home" href="/">
-    <div class="img-container">
-      <img src="/images/logo-small.png" alt="Logo" />
-    </div>
-    Océane Duchêne
-  </a>
-  <ul>
-    {#each links as { href, label }}
-      <li class:current={href === $page.path}><a {href}>{label}</a></li>
-    {/each}
-  </ul>
-</nav>
+<header>
+  <nav>
+    <a class="home" href="/">
+      <div class="img-container">
+        <img src="/images/logo-small.png" alt="Logo" />
+      </div>
+      Océane Duchêne
+    </a>
+    <ul>
+      {#each links as { href, label }}
+        <li class:current={href === $page.path}><a {href}>{label}</a></li>
+      {/each}
+    </ul>
+  </nav>
+</header>
 
 <style lang="sass">
+  header
+    position: fixed
+    z-index: 3
+    width: 100%
+    height: 5rem
+    background: white
+    box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+
   ul, nav
     display: flex
     align-items: center
@@ -92,6 +102,8 @@
       margin: auto
 
   @include tablet
+    header
+      height: 8rem
     nav
       padding: 1rem
       padding-bottom: 0.5rem
@@ -109,6 +121,9 @@
       border-radius: 50%
 
   @include desktop
+    header
+      height: 5rem
+
     nav
       width: 75%
       margin: auto
