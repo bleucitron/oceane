@@ -10,7 +10,7 @@
   $: isHome = $page.path === '/';
 
   $: title = isHome
-    ? `${baseTitle} - Coach en bien-être et sexualité}`
+    ? `${baseTitle} - Coach en bien-être et sexualité`
     : `${baseTitle} - ${titleByPath[$page.path]}`;
 </script>
 
