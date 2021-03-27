@@ -16,7 +16,7 @@
     />
   </div>
   <div class="content">
-    <p>Remettez vos envies au cœur de votre vie.</p>
+    <p>Remettez <strong>vos envies</strong> au cœur de votre vie.</p>
     <p>
       Atteindre vos objectifs, reprendre confiance en vous, trouver l'équilibre
       entre vie pro et vie perso.
@@ -32,8 +32,8 @@
       l'esprit et vous hésitez.
     </p>
     <p>
-      Je suis là pour vous écouter et vous accompagner pas à pas vers l'atteinte
-      de vos objectifs.
+      Je suis là pour vous écouter et vous accompagner pas à pas vers l'
+      <strong>atteinte de vos objectifs</strong>.
     </p>
     <p>Ensemble, mettons le cap sur ce qui compte vraiment pour vous !</p>
   </div>
@@ -48,13 +48,13 @@
     <p>Il n'y a pas une sexualité, mais de<b>s</b> sexualité<b>s</b>.</p>
     <p>Quelle est la votre ?</p>
     <p>
-      Confronté à la sur-représentation d'une sexualité normée, il est parfois
+      Confrontés à la sur-représentation d'une sexualité normée, il est parfois
       difficile de s'y reconnaître, laissant la place aux questionnements, aux
       doutes, à la perte de confiance en soi.
     </p>
     <p>
       Comment se libérer de l'injonction à la performance et jouir pleinement
-      d'une sexualité saine et joyeuse ?
+      d'une <strong>sexualité saine et joyeuse</strong> ?
     </p>
     <p>
       Découverte de votre sexualité, peur de ne pas être à la hauteur, troubles

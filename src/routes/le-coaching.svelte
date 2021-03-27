@@ -18,10 +18,10 @@
     </p>
     <p>
       Il s'agit d'une pratique centrée sur l'Humain, qui part du présent pour se
-      tourner vers l'avenir. Elle vise à faire émerger en vous vos propres
-      solutions : nombre d'entre nous nous mettons des barrières nous-mêmes, qui
-      nous empêchent de voir clairement nos capacités et nos ressources : le
-      coaching agit comme révélateur de vos forces.
+      tourner vers l'avenir. Elle vise à faire émerger en vous
+      <strong>vos propres solutions</strong> : nombre d'entre nous nous mettons des
+      barrières nous-mêmes, qui nous empêchent de voir clairement nos capacités et
+      nos ressources. Le coaching agit comme révélateur de vos forces.
     </p>
     <p>
       Le coach ne vous donne pas de solution clé en main : c'est par votre
@@ -100,6 +100,10 @@
 
   @include desktop
     blockquote
+      &::after
+        top: -0.5em
+        left: -0.1em
+
       p
         font-size: 1.2em
 </style>
