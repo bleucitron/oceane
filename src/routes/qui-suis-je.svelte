@@ -88,7 +88,4 @@
       width: 17rem
       height: 21rem
       max-height: 21rem
-
-    img
-
 </style>
