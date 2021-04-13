@@ -12,7 +12,7 @@
       Le coaching nécessite de 5 à 10 séances, qui vont durer entre 45 minutes
       et 1h30.
     </p>
-    <p>Elles seront espacées, selon vos besoins, de 2 à 4 semaines.</p>
+    <p>Elles seront espacées, selon vos besoins, de 1 à 3 semaines.</p>
     <p>
       Une séance découverte préalable nous permettra de faire le point sur votre
       situation, vos besoins et de définir votre objectif.

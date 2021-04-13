@@ -1,28 +1,59 @@
 <script>
+  import { slide } from 'svelte/transition';
   import { stores } from '@sapper/app';
-  import { titleByPath } from '../helpers';
 
   const { page } = stores();
 
-  const links = Object.entries(titleByPath).map(([href, label]) => ({
-    href,
-    label,
-  }));
+  let open = false;
 </script>
 
-<header>
+<header on:click={() => (open = false)}>
   <nav>
-    <a class="home" href="/">
-      <div class="img-container">
-        <img src="/images/logo-small.png" alt="Logo" />
-      </div>
-      Océane Duchêne
-    </a>
-    <ul>
-      {#each links as { href, label }}
-        <li class:current={href === $page.path}><a {href}>{label}</a></li>
-      {/each}
-    </ul>
+    <div class="main">
+      <a class="home" href="/">
+        <div class="img-container">
+          <img src="/images/logo-small.png" alt="Logo" />
+        </div>
+        <p>Océane Duchêne</p>
+      </a>
+      <ul>
+        <li
+          class:current={$page.path.startsWith('/le-coaching')}
+          on:click|stopPropagation={() => (open = !open)}
+          class:active={open}
+        >
+          <div>Le coaching</div>
+        </li>
+        <li class:current={$page.path === '/qui-suis-je'} class:inactive={open}>
+          <a href="/qui-suis-je">Qui suis-je ?</a>
+        </li>
+        <li class:current={$page.path === '/tarifs'} class:inactive={open}>
+          <a href="/tarifs">Tarifs</a>
+        </li>
+        <li class:current={$page.path === '/contact'} class:inactive={open}>
+          <a href="/contact">Contact</a>
+        </li>
+        <li class:inactive={open}>
+          <a href="/contact">Blog</a>
+        </li>
+      </ul>
+    </div>
+    {#if open}
+      <ul class="submenu" transition:slide>
+        <li class:current={$page.path === '/le-coaching'}>
+          <a href="/le-coaching">Qu'est ce que c'est ?</a>
+        </li>
+        <li class:current={$page.path === '/le-coaching/bien-etre'}>
+          <a href="/le-coaching/bien-etre">Bien-être</a>
+        </li>
+        <li class:current={$page.path === '/le-coaching/sexualite-positive'}>
+          <a href="/le-coaching/sexualite-positive">Sexualité positive</a>
+        </li>
+        <li class:current={$page.path === '/le-coaching/eco-responsabilite'}>
+          <a href="/le-coaching/eco-responsabilite">Éco-responsabilité</a>
+        </li>
+      </ul>
+    {/if}
   </nav>
 </header>
 
@@ -31,17 +62,19 @@
     position: fixed
     z-index: 3
     width: 100%
-    height: 5rem
+    // height: 5rem
     background: white
     box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
 
-  ul, nav
+  ul, .main
     display: flex
     align-items: center
 
-  nav
-    display: flex
+  .main
     flex-flow: column
+
+
+  nav
     padding: 1rem
     padding-bottom: 0
     max-width: 65rem
@@ -51,13 +84,17 @@
       display: flex
       align-items: center
 
-      font-size: 1.2rem
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      p
+        margin: 0
+        font-size: 1.2rem
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
       &.home
         text-transform: uppercase
 
   ul
     margin: 0.5rem 0
+    margin-bottom: 0.2rem
+    align-items: flex-start
 
   a
     text-decoration: none
@@ -67,17 +104,41 @@
       outline: none
       color: var(--pink)
 
-  li
-    margin: 0 0.5rem
+  .submenu
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    width: 100%
+    margin: 0
+    margin-left: 1rem
 
-    &.current a
+    li
+      margin: 0.3rem 0
+      font-size: 0.9rem
+      font-family: 'Bebas Neue', sans-serif
+
+  li
+    margin: 0 0.4rem
+    color: var(--grey)
+    font-size: 1rem
+    font-family: 'Bebas Neue', sans-serif
+    transition: opacity 0.2s ease-in
+    cursor: pointer
+
+    &:first-child
+      margin-left:0
+    &:last-child
+      margin-right:0
+
+    &.current a, &.current div
       color: var(--pink)
+
+    &.inactive
+      opacity: 0.5
+
 
     a
       position: relative
-      color: var(--grey)
-      font-size: 1.1rem
-      font-family: 'Bebas Neue', sans-serif
 
       &::after
         content: ''
@@ -103,16 +164,25 @@
 
   @include tablet
     header
-      height: 8rem
+      // height: 8rem
     nav
+      width: fit-content
+      margin: auto
       padding: 1rem
       padding-bottom: 0.5rem
 
-      a
+      a p
         font-size: 1.5rem
 
-    a
-      font-size: 1.5rem
+      li
+        font-size: 1.5rem
+        margin: 0 1rem
+
+    .submenu
+      margin-left: 1.5rem
+
+      li
+        font-size: 1.2rem
 
     .img-container
       width: 6rem
@@ -122,12 +192,19 @@
 
   @include desktop
     header
-      height: 5rem
+      // height: 5rem
+      .home
+        margin-right: 5rem
+
+    .main
+      flex-flow: row
+
+    .submenu
+      width: fit-content
+      margin: auto
 
     nav
-      width: 75%
       margin: auto
-      padding: 1rem
       flex-flow: row
       justify-content: space-between
 

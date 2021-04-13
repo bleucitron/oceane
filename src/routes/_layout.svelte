@@ -63,7 +63,7 @@
 
     :global(h2)
       position: sticky
-      top: 5rem
+      top: 4.5rem
       margin: 1.5rem 0
       margin-bottom: 0
       background: white
