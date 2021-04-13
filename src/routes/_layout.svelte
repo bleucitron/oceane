@@ -81,6 +81,7 @@
       margin: 1.5rem 0
       margin-bottom: 0
       background: white
+      width: 100%
       z-index: 1
       font-size: 1.2em
       font-weight: bold

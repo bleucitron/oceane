@@ -7,7 +7,7 @@
 </div>
 
 <section>
-  <a href="/coaching/bien-etre"><h2>Coaching Bien-être</h2></a>
+  <a href="/le-coaching/bien-etre"><h2>Coaching Bien-être</h2></a>
 
   <div class="img-container">
     <img
@@ -25,7 +25,9 @@
 </section>
 
 <section>
-  <h2>Coaching Sexualité</h2>
+  <a href="/le-coaching/sexualite-positive">
+    <h2>Coaching Sexualité positive</h2>
+  </a>
   <div class="img-container">
     <img src="/images/belly-3186730_1920.jpg" alt="A flower on a belly" />
   </div>
@@ -40,9 +42,14 @@
 </section>
 
 <section>
-  <h2>Coaching Éco-responsabilité</h2>
+  <a href="/le-coaching/eco-responsabilite">
+    <h2>Coaching Éco-responsabilité</h2>
+  </a>
   <div class="img-container">
-    <img src="/images/belly-3186730_1920.jpg" alt="A flower on a belly" />
+    <img
+      src="/images/hummingbird-5255827_640.jpg"
+      alt="Un colibri qui butine"
+    />
   </div>
   <div class="content">
     <p>
@@ -57,7 +64,10 @@
     display: none
 
   a
+    width: 100%
+    display: flex
     color: inherit
+
     &:hover, &:focus
       text-decoration: none
 
@@ -84,6 +94,9 @@
 
     section:nth-of-type(2)
       align-items: flex-end
+
+      a
+        justify-content: flex-end
 
       .img-container
         left: 0

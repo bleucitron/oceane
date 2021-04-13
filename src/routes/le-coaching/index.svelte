@@ -162,8 +162,6 @@
 
   @include desktop
     blockquote
-      &::after
-
       p
         font-size: 1.2em
 </style>
