@@ -34,9 +34,9 @@
         <li class:current={$page.path === '/contact'} class:inactive={open}>
           <a href="/contact">Contact</a>
         </li>
-        <li class:inactive={open}>
+        <!-- <li class:inactive={open}>
           <a href="/contact">Blog</a>
-        </li>
+        </li> -->
       </ul>
     </div>
     {#if open}
