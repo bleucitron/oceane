@@ -6,6 +6,7 @@
       src="/images/tea-time-3240766_1920.jpg"
       alt="Des livres et une tasse de thé sur une table"
     />
+    <!-- <aside>Contactez-moi pour en savoir plus !</aside> -->
   </div>
   <div class="content">
     <p>Remettez <strong>vos envies</strong> au cœur de votre vie.</p>
@@ -29,4 +30,5 @@
     </p>
     <p>Ensemble, mettons le cap sur ce qui compte vraiment pour vous !</p>
   </div>
+  <a class="button" href="/contact">Contactez-moi !</a>
 </section>

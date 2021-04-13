@@ -26,4 +26,5 @@
       (re)trouver une sexualité épanouie et épanouissante !
     </p>
   </div>
+  <a class="button" href="/contact">Contactez-moi !</a>
 </section>

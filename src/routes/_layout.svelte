@@ -49,6 +49,8 @@
       margin-bottom: 3rem
 
     :global(section)
+      display: flex
+      flex-flow: column
       position: relative
       margin: 2em 0
 
@@ -60,6 +62,18 @@
 
     :global(.content)
       padding: 0 1.5rem
+
+    :global(a.button)
+      margin: 0 auto
+      padding: 0.7em 1.5em
+      font-size: 1.2em
+      color: white
+      background: var(--pink)
+      border-radius: 0.5em
+
+      &:hover, &:focus
+        box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+        text-decoration: none
 
     :global(h2)
       position: sticky

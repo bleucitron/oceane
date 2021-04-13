@@ -31,4 +31,5 @@
       notre manière, adapter nos gestes au quotidien sans se faire violence !
     </p>
   </div>
+  <a class="button" href="/contact">Contactez-moi !</a>
 </section>

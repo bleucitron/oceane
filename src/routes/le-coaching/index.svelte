@@ -1,5 +1,22 @@
 <h1>Le coaching</h1>
 
+<section class="types">
+  <div class="content">
+    <p>Je vous propose 3 types d'accompagnements.</p>
+    <ul>
+      <a href="/le-coaching/bien-etre">
+        <li>Coaching Bien-être</li>
+      </a>
+      <a href="/le-coaching/sexualite-positive">
+        <li>Coaching Sexualité positive</li>
+      </a>
+      <a href="/le-coaching/sexualite-positive">
+        <li>Coaching Éco-responsabilité</li>
+      </a>
+    </ul>
+  </div>
+</section>
+
 <section>
   <h2>Pour qui ? pour quoi ?</h2>
 
@@ -40,7 +57,7 @@
   <p>C’est être à côté.</p>
 </blockquote>
 
-<section>
+<section class="deontology">
   <h2>Code de Déontologie</h2>
   <div class="content">
     <p>Je m'engage à:</p>
@@ -59,14 +76,18 @@
   </div>
 </section>
 
+<section>
+  <a class="button" href="/contact">Contactez-moi !</a>
+</section>
+
 <style lang="sass">
   blockquote
     position: relative
     color: black
-    font-size: 1.2em
+    font-size: 1.1em
     font-style: italic
     margin: 2em 0
-    padding-left: 0.5em
+    padding: 0 1.5em
     quotes: initial
 
     &::after
@@ -75,34 +96,73 @@
       opacity: 0.2
       font-size: 12em
       z-index: -1
-      top: 0
-      left: -0.1em
+      top: -0.5em
+      left: 0
       content: open-quote
 
     p
+      margin: auto
       text-align: center
 
   ul
     padding-left: 1.5em
     list-style: disc
 
+  .types
+    margin: 4em 0
+
+    .content
+      width: 100%
+
+    p
+      margin: 2em auto
+      text-align: center
+
+    ul
+      display: flex
+      justify-content: center
+      flex-flow: column
+      list-style: none
+      padding: 0
+
+      a
+        color: white
+
+        li
+          padding: 1rem
+          margin: 0.5rem
+          background: var(--pink)
+          border-radius: 0.5rem
+          text-align: center
+
+        &:hover, &:focus
+          text-decoration: none
+          li
+            box-shadow: 0px 0px 5px 0px rgba(black, 0.5)
+
+
   li
     margin: 0.5em 0
 
-  section:last-of-type
+  section.deontology
     align-items: center
 
   @include tablet
+    .types
+      ul
+        flex-flow: row
+
     blockquote
+      font-size: 1em
+      margin-bottom: 5rem
+
       &::after
-        top: -0.25em
-        left: -0.1em
+        font-size: 9em
+        left: 0.5em
 
   @include desktop
     blockquote
       &::after
-        top: -0.5em
-        left: -0.1em
 
       p
         font-size: 1.2em
