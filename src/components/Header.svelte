@@ -1,13 +1,14 @@
 <script>
   import { slide } from 'svelte/transition';
   import { stores } from '@sapper/app';
+  import { outsideClick } from '../helpers';
 
   const { page } = stores();
 
   let open = false;
 </script>
 
-<header on:click={() => (open = false)}>
+<header on:click={() => (open = false)} use:outsideClick={() => (open = false)}>
   <nav>
     <div class="main">
       <a class="home" href="/">
