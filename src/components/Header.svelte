@@ -8,11 +8,7 @@
   let open = false;
 </script>
 
-<header
-  on:click={() => (open = false)}
-  on:touchend={() => (open = false)}
-  use:outsideClick={() => (open = false)}
->
+<header on:click={() => (open = false)} use:outsideClick={() => (open = false)}>
   <nav>
     <div class="main">
       <a class="home" href="/">
@@ -25,7 +21,6 @@
         <li
           class:current={$page.path.startsWith('/le-coaching')}
           on:click|stopPropagation={() => (open = !open)}
-          on:touchend|stopPropagation={() => (open = !open)}
           class:active={open}
         >
           <div>Le coaching</div>

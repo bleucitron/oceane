@@ -6,12 +6,10 @@ export default function (node, cb) {
   }
 
   document.addEventListener('click', check);
-  document.addEventListener('touchend', check);
 
   return {
     destroy() {
       document.removeEventListener('click', check);
-      document.removeEventListener('touchend', check);
     },
   };
 }
