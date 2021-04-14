@@ -1,7 +1,7 @@
 export default function (node, cb) {
   function check(e) {
     if (!node.contains(e.target)) {
-      cb?.();
+      if (cb) cb();
     }
   }
 
