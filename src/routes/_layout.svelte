@@ -106,9 +106,9 @@
     max-height: 15rem
 
     :global(img)
-      object-fit: cover
+      object-fit: contain
       width: 100%
-      width: 100%
+      height: 100%
 
   @include tablet
     main

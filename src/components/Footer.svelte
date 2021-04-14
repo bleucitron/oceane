@@ -48,6 +48,17 @@
       bottom: 0
       left: 0
       right: 0
+      display: flex
+      overflow: hidden
+      margin: auto
+      width: 100%
+      max-height: 15rem
+
+      img
+        object-fit: cover
+        width: 100%
+        height: 100%
+
 
     figure
       position: relative
@@ -74,10 +85,6 @@
       right: -1em
       font-size: 1.2em
 
-
-    // a
-    //   color: var(--lightest-grey)
-
     aside
       display: flex
       flex-flow: column
@@ -86,18 +93,6 @@
       height: 2.5rem
       text-align: center
       background: linear-gradient(var(--light-blue), var(--blue))
-
-  :global(.img-container)
-    display: flex
-    overflow: hidden
-    margin: auto
-    width: 100%
-    max-height: 15rem
-
-    :global(img)
-      object-fit: cover
-      width: 100%
-      width: 100%
 
   @include tablet
     footer
