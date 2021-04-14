@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <h1>Accueil</h1>
 <div class="img-container logo">
   <img src="/images/logo.png" alt="Océane logo" />
