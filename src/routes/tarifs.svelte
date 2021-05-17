@@ -27,7 +27,7 @@
         à votre domicile à Bordeaux Métropole, dans le respect des gestes
         barrières
       </li>
-      <li>en visio ou que vous soyez pour plus de liberté</li>
+      <li>en visio, où que vous soyez pour plus de liberté</li>
     </ul>
   </div>
 </section>

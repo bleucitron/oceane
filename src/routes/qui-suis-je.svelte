@@ -56,6 +56,7 @@
     box-shadow: 0px 0px 10px 0px rgba(black, 0.5)
 
     img
+      object-fit: cover
       filter: opacity(80%)
       object-position: 10px -20px
 
