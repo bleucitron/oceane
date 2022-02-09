@@ -1,20 +1,20 @@
-const preprocess = require('svelte-preprocess');
-const autoprefixer = require('autoprefixer');
+import autoprefixer from 'autoprefixer';
+import preprocess from 'svelte-preprocess';
+import vercel from '@sveltejs/adapter-vercel';
 
-const options = {
-  defaults: {
-    style: 'sass',
-  },
-  sass: {
-    prependData: `@import '${__dirname}/src/sass/media.sass'`,
-    renderSync: true,
-  },
-  postcss: {
-    plugins: [autoprefixer],
+const config = {
+  preprocess: preprocess({
+    sass: {
+      prependData: `@import 'src/sass/media.sass'`,
+      renderSync: true,
+    },
+    postcss: {
+      plugins: [autoprefixer],
+    },
+  }),
+  kit: {
+    adapter: vercel(),
   },
 };
 
-module.exports = {
-  preprocess: preprocess(options),
-  options,
-};
+export default config;
