@@ -3,6 +3,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 * {
@@ -19,7 +20,7 @@ p {
   text-align: justify;
 }
 
-#svelte, #sapper {
+#app {
   display: flex;
   flex-flow: column;
   justify-content: space-between;

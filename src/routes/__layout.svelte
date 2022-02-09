@@ -1,17 +1,17 @@
 <script>
-  import { stores } from '@sapper/app';
+  import { page } from '$app/stores';
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
   import { titleByPath } from '../helpers';
 
-  const { page } = stores();
-
   let baseTitle = 'Océane coaching';
-  $: isHome = $page.path === '/';
+
+  $: path = $page.url.pathname;
+  $: isHome = path === '/';
 
   $: title = isHome
     ? `${baseTitle} - Coach en bien-être et sexualité`
-    : `${baseTitle} - ${titleByPath[$page.path]}`;
+    : `${baseTitle} - ${titleByPath[path]}`;
 </script>
 
 <svelte:head>

@@ -1,11 +1,11 @@
 <script>
   import { slide } from 'svelte/transition';
-  import { stores } from '@sapper/app';
+  import { page } from '$app/stores';
   import { outsideClick } from '../helpers';
 
-  const { page } = stores();
-
   let open = false;
+
+  $: path = $page.url.pathname;
 </script>
 
 <header on:click={() => (open = false)} use:outsideClick={() => (open = false)}>
@@ -19,19 +19,19 @@
       </a>
       <ul>
         <li
-          class:current={$page.path.startsWith('/le-coaching')}
+          class:current={path.startsWith('/le-coaching')}
           on:click|stopPropagation={() => (open = !open)}
           class:active={open}
         >
           <div>Le coaching</div>
         </li>
-        <li class:current={$page.path === '/qui-suis-je'} class:inactive={open}>
+        <li class:current={path === '/qui-suis-je'} class:inactive={open}>
           <a href="/qui-suis-je">Qui suis-je ?</a>
         </li>
-        <li class:current={$page.path === '/tarifs'} class:inactive={open}>
+        <li class:current={path === '/tarifs'} class:inactive={open}>
           <a href="/tarifs">Tarifs</a>
         </li>
-        <li class:current={$page.path === '/contact'} class:inactive={open}>
+        <li class:current={path === '/contact'} class:inactive={open}>
           <a href="/contact">Contact</a>
         </li>
         <!-- <li class:inactive={open}>
@@ -41,16 +41,16 @@
     </div>
     {#if open}
       <ul class="submenu" transition:slide>
-        <li class:current={$page.path === '/le-coaching'}>
+        <li class:current={path === '/le-coaching'}>
           <a href="/le-coaching">Qu'est ce que c'est ?</a>
         </li>
-        <li class:current={$page.path === '/le-coaching/bien-etre'}>
+        <li class:current={path === '/le-coaching/bien-etre'}>
           <a href="/le-coaching/bien-etre">Bien-être</a>
         </li>
-        <li class:current={$page.path === '/le-coaching/sexualite-positive'}>
+        <li class:current={path === '/le-coaching/sexualite-positive'}>
           <a href="/le-coaching/sexualite-positive">Sexualité positive</a>
         </li>
-        <li class:current={$page.path === '/le-coaching/eco-responsabilite'}>
+        <li class:current={path === '/le-coaching/eco-responsabilite'}>
           <a href="/le-coaching/eco-responsabilite">Éco-responsabilité</a>
         </li>
       </ul>
