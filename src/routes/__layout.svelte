@@ -25,6 +25,9 @@
 <Footer />
 
 <style lang="sass">
+  :global
+    @import "../sass/global.sass"
+
   main
     margin-top: 5rem
     // padding: 0rem 1rem
