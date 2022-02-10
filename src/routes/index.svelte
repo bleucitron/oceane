@@ -16,7 +16,7 @@
     <p>
       Une écoute et un parcours <strong>adaptés à chacun</strong>, pour vous
       accompagner dans l'atteinte de <strong>vos objectifs</strong> personnels et
-      professionnels. COUCOU
+      professionnels.
     </p>
   </div>
 </section>
