@@ -43,13 +43,13 @@
     <aside>Faisons connaissance sans pression</aside>
     <h3>Séance individuelle</h3>
     <ul>
-      <li><b>20€</b> en visio</li>
-      <li><b>30€</b> en déplacement à Bordeaux Métropole</li>
+      <li><b>35€</b> en visio</li>
+      <li><b>45€</b> en déplacement à Bordeaux Métropole</li>
     </ul>
     <h3>Séance en couple</h3>
     <ul>
-      <li><b>30€</b> en visio</li>
-      <li><b>40€</b> en déplacement à Bordeaux Métropole</li>
+      <li><b>60€</b> en visio</li>
+      <li><b>70€</b> en déplacement à Bordeaux Métropole</li>
     </ul>
   </div>
 </section>
