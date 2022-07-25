@@ -35,7 +35,6 @@
 <section>
   <h2>
     Tarifs
-    <div>Spécial Lancement</div>
   </h2>
   <div class="content">
     <h3>Séance découverte</h3>
